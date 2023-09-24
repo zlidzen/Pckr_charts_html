@@ -15,6 +15,8 @@ const row2 = ['A2o','K2o','Q2o','J2o','T2o','92o','82o','72o','62o','52o','42o',
 
 const rows = [rowA, rowK, rowQ, rowJ, rowT, row9, row8, row7, row6, row5, row4, row3, row2];
 
+const navBlockName = 'prev_action';
+
 function addChart(){
   var chartEl = document.getElementById('chart')
   if (!chartEl) return;
@@ -62,4 +64,23 @@ function liLink(link, val){
   li.appendChild(a);
 
   return li;
+}
+
+function createNav(navLinksArray, navName){
+  var ul = document.createElement('ul');
+
+  navLinksArray.forEach(
+    (navLink) => {
+      if (navLink.isActive) {
+        ul.appendChild(liGray(navLink.caption));
+      } else {
+        ul.appendChild(liLink(navLink.link, navLink.caption));
+      }}
+  );
+  
+  var nav = document.createElement('div');
+  nav.innerText += navName;
+  nav.appendChild(ul);
+
+  return nav;
 }
