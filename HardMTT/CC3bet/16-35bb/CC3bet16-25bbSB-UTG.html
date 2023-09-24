@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <link rel="stylesheet" href="../../../style.css">
+    <script src="../../../main.js"></script> 
+  </head>
+<body>  
+<div class='content'>
+    <div id='prev_action'>  </div>
+    <div class='mid'>
+    <H2 id='title'>MTT NL holdem-poker charts</H2>
+      <table>
+        <tr>
+          <td><a href='CC3bet16-25bbUTG.html'>UTG</a> </td>
+          <td> <a href='CC3bet16-25bbMP-UTGMP.html'>MP-UTG/MP</a> </td>
+          <td> <a href='CC3bet16-25bbHJCO-UTG.html'>HJ/CO-UTG</a> </td>
+          <td> <a href='CC3bet16-25bbHJCO-MPHJ.html'>HJ/CO-MP/HJ</a> </td>
+          <td> <a href='CC3bet16-25bbBTN-UTG.html'>BTN-UTG</a> </td>
+          <td> <a href='CC3bet16-25bbBTN-MP.html'>BTN-MP</a> </td>
+        </tr>
+        <tr>
+          <td> <a href='CC3bet16-25bbBTN-HJCO.html'>BTN-HJ/CO</a> </td>
+          <td class='gray_color'> <a href=''>SB-UTG</a> </td>
+          <td> <a href='CC3bet16-25bbSB-MP.html'>SB-MP</a> </td>
+          <td> <a href='CC3bet16-25bbSB-HJCO.html'>SB-HJ/CO</a> </td>
+          <td> <a href='CC3bet16-25bbSB-BTN.html'>SB-BTN</a> </td>
+        </tr>
+      </table>
+
+      <div id="chart">  </div>
+
+  </div>
+  <div id='post_action'>
+    <table>
+      <tr><td class='green_color'>Cold-Call</td></tr></tr>
+      <tr><td class='red_color'>3-bet or 3b-PUSH &lt;20bb</td></tr>
+      <tr><td class='lemon_color'>3-bet PUSH</td></tr>
+      <tr><td class='blue_color'>3-bet PUSH &lt;20bb</td></tr>
+    </table>
+  </div>
+</div>
+</body>
+    <script type="text/javascript">
+      addChart();
+
+  let green_list = ['ATs','A9s','A8s','KQs','KJs','KTs','K9s',
+                   'KQo','QJs','QTs','AJo','JTs','T9s','98s'];
+  paint_ids(green_list,'green_color');
+
+  let red_list = ['AA','KK','QQ'];
+  paint_ids(red_list, 'red_color');
+
+  let lemon_list = ['AKs','AQs','AKo','AQo','JJ','TT','99'];
+  paint_ids(lemon_list,'lemon_color');
+
+  let blue_list = ['AJs','88','77'];
+  paint_ids(blue_list,'blue_color');
+</script>
+<script src="navigation.js"></script>
+</html>

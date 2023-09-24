@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../main.js"></script> 
+  </head>
+<body>  
+<div class='content'>
+    <div id='prev_action'>  </div>
+
+    <div class='mid'>
+    <H2 id='title'>MTT NL holdem-poker charts</H2>
+      <table>
+        <tr>
+          <td> <a href='100bbOpenUTG.html'>UTG</a> </td>
+          <td> <a href='100bbOpenUTG1.html'>UTG+1</a> </td>
+          <td> <a href='100bbOpenMP.html'>MP</a> </td>
+          <td> <a href='100bbOpenMP1.html'>MP+1</a> </td>
+          <td> <a href='100bbOpenHJ.html'>HJ</a> </td>
+          <td class='gray_color'>CO</td>
+          <td> <a href='100bbOpenBTN.html'>BTN</a> </td>
+          <td><a href='100bbOpenSB.html'>SB</a> </td>
+        </tr>
+      </table>
+
+      <div id="chart">  </div>
+
+  </div>
+  <div id='post_action'>
+    <table>
+      <tr><td class='green_color'>4-bet / call vs all-in</td></tr>
+      <tr><td class='yellow_color'>Call vs 3-betn</td></tr>
+      <tr><td class='gray_color'>Fold vs 3-bet</td></tr>
+      <tr><td class='blue_color'>4-bet / fold vs all-in</td></tr>
+    </table>
+  </div>
+</div>
+</body>
+    <script type="text/javascript">
+      addChart();
+
+
+  let green_list = ['AA','AKs','AKo','KK','QQ','JJ'];
+  paint_ids(green_list, 'green_color');
+
+  let gray_list = ['A8s','A7s','A6s','K9s','K8s','K7s',
+                  'KQo','Q9s','Q8s','AJo','KJo','QJo',
+                  'J9s','J8s','ATo','KTo','QTo','JTo','T8s',
+                  'A9o','97s','87s','86s','76s','75s','66',
+                  '65s','55','54s','44','33','22'];
+  paint_ids(gray_list,'gray_color');
+
+  let yellow_list = ['AQs','AJs','ATs','A9s','KQs','KJs','KTs','AQo',
+                    'AQo','QJs','QTs','JTs','TT','T9s','99','98s',
+                    '88','77'];
+  paint_ids(yellow_list,'yellow_color');
+
+  let blue_list = ['A5s','A4s','A3s','A2s'];
+  paint_ids(blue_list,'blue_color');
+</script>
+<script src="navigation.js"></script>
+</html>

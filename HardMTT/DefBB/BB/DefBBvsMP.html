@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <link rel="stylesheet" href="../../../style.css">
+    <script src="../../../main.js"></script> 
+  </head>
+<body>  
+<div class='content'>
+    <div id='prev_action'>  </div>
+    <div class='mid'>
+    <H2 id='title'>MTT NL holdem-poker charts</H2>
+      <table>
+        <tr>
+          <td><a href='DefBBvsUTG.html'>BB vs UTG</a></td>
+          <td class='gray_color'> <a href=''>BB vs MP</a> </td>
+          <td> <a href='DefBBvsHJCO.html'>BB vs HJ/CO</a> </td>
+          <td> <a href='DefBBvsBTNSB.html'>BB vs BTN/SB</a> </td>
+        </tr>
+      </table>
+
+      <div id="chart">  </div>
+
+  </div>
+  <div id='post_action'>
+    <table>
+      <tr><td class='blue_color'>3bb RFI</td></tr>
+      <tr><td class='lemon_color'>2.5bb RFI</td></tr>
+      <tr><td class='green_color'>2bb RFI</td></tr>
+      <tr><td class='purple_color'>3-bet</td></tr>
+      <tr><td class='red_color'>3-bet or Cold-Call 3bb</td></tr>
+    </table>
+  </div>
+</div>
+</body>
+    <script type="text/javascript">
+      addChart();
+
+  let blue_list = ['AQs','AJs','ATs','A9s','A8s','A7s','A6s','KQs','KJs',
+                  'KTs','K9s','AQo','KQo','QJs','QTs','Q9s','AJo','KJo','JJ',
+                  'JTs','J9s','ATo','TT','T9s','99','98s','88','87s','77',
+                  '66','55','44','33','22'];
+  paint_ids(blue_list, 'blue_color');
+
+  let lemon_list = ['K8s','K7s','K6s','K5s','K4s','K3s','K2s','Q8s',
+                   'QJo','J8s','KTo','QTo','JTo','T8s','A9o','97s',
+                   'A8o','86s','76s','75s','65s','64s','54s','53s',
+                   '43s','42s','32s'];
+  paint_ids(lemon_list,'lemon_color');
+
+  let green_list = ['Q7s','Q6s','Q5s','Q4s','Q3s','Q2s','J7s','J6s',
+                   'J5s','J4s','J3s','J2s','T7s','T6s','K9o','Q9o',
+                   'J9o','T9o','96s','98o','85s','74s'];
+  paint_ids(green_list,'green_color');
+
+  let purple_list = ['AA','AKs','AKo','KK','QQ'];
+  paint_ids(purple_list,'purple_color');
+
+  let red_list = ['A5s','A4s','A3s','A2s'];
+  paint_ids(red_list, 'red_color');
+</script>
+<script src="navigation.js"></script>
+</html>

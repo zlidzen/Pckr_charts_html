@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../main.js"></script> 
+  </head>
+<body>  
+<div class='content'>
+    <div id='prev_action'>  </div>
+    <div class='mid'>
+    <H2 id='title'>MTT NL holdem-poker charts</H2>
+      <table>
+        <tr>
+          <td> <a href='CC3bUTG.html'>UTG vs UTG</a> </td>
+          <td> <a href='CC3bMPvsUTGMP.html'>MP vs UTG/MP</a> </td>
+          <td> <a href='CC3bHJCOvsUTG.html'>HJ/CO vs UTG</a> </td>
+          <td> <a href='CC3bHJCOvsMPHJ.html'>HJ/CO vs MP/HJ</a> </td>
+          <td> <a href='CC3bBTNvsUTG.html'>BTN vs UTG</a> </td>
+          <td> <a href='CC3bBTNvsMP.html'>BTN vs MP</a> </td>
+        </tr>
+        <tr>
+          <td> <a href='CC3bBTNvsHJCO.html'>BTN vs HJ/CO</a> </td>
+          <td class='gray_color'>SB vs UTG</td>
+          <td> <a href='CC3bSBvsMP.html'>SB vs MP</a> </td>
+          <td> <a href='CC3bSBvsHJCO.html'>SB vs HJ/CO</a> </td>
+          <td> <a href='CC3bSBvsBTN.html'>SB vs BTN</a> </td>
+        </tr>
+      </table>
+
+      <div id="chart">  </div>
+
+  </div>
+  <div id='post_action'>
+    <table>
+      <tr><td class='red_color'>3-bet</td></tr>
+      <tr><td class='yellow_color'>Cold Call</td></tr>
+    </table>
+  </div>
+</div>
+</body>
+    <script type="text/javascript">
+      addChart();
+
+  let red_list = ['AA','AKs','AKo','KK','QQ'];
+  paint_ids(red_list, 'red_color');
+
+  let yellow_list = ['AQs','AJs','ATs','A9s','A8s','A7s','A6s','A5s',
+                    'A4s','A3s','A2s','KQs','KJs','KTs','AQo','QJs',
+                    'QTs','JJ','JTs','TT','T9s','99','98s','88','87s',
+                    '77','66','55','44','33','22'];
+  paint_ids(yellow_list,'yellow_color');
+</script>
+<script src="navigation.js"></script>
+</html>

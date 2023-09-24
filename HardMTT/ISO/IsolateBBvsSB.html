@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../main.js"></script> 
+  </head>
+<body>  
+<div class='content'>
+    <div id='prev_action'>  </div>
+    <div class='mid'>
+    <H2 id='title'>MTT NL holdem-poker charts</H2>
+      <table>
+        <tr>
+          <td> <a href='IsolateUTGMP.html'>UTG/MP</a> </td>
+          <td> <a href='IsolateHJCO.html'>HJ/CO</a> </td>
+          <td> <a href='IsolateBTN.html'>BTN</a> </td>
+          <td> <a href='IsolateSBBB.html'>SB/BB</a> </td>
+          <td class='gray_color'> <a href=''>BB vs SB</a> </td>
+        </tr>
+      </table>
+
+      <div id="chart">  </div>
+
+  </div>
+  <div id='post_action'>
+    <table>
+      <tr><td class='green_color'>2 limpers+</td></tr>
+      <tr><td class='lemon_color'>1 limper</td></tr>
+    </table>
+  </div>
+</div>
+</body>
+    <script type="text/javascript">
+      addChart();
+
+  let green_list = ['AA','AKs','AQs','AJs','ATs','A9s','A8s','AKo',
+                   'KK','KQs','KJs','AQo','KQo','QQ','QJs','AJo','KJo',
+                   'JJ','ATo','TT','A9o','99','A8o','88','77'];
+  paint_ids(green_list, 'green_color');
+
+  let lemon_list = ['A7s','A6s','A5s','A4s','A3s','A2s','KTs','K9s',
+                   'K8s','K7s','QTs','Q9s','Q8s','QJo','JTs','J9s',
+                   'J8s','KTo','QTo','JTo','T9s','K9o','A7o','A6o','66',
+                   'A5o','55','A4o','44','A3o','33','A2o','22'];
+  paint_ids(lemon_list,'lemon_color');
+</script>
+<script src="navigation.js"></script>
+</html>

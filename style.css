@@ -1,0 +1,24 @@
+  *{font-family:'Arial Обычный', 'Arial';
+    font-weight:400;
+    font-style:normal;
+    font-size:13px;
+    color:#333333;
+    text-align:center;
+    line-height:normal;}
+  td{border: solid 1px gray;}
+  a{text-decoration:none; font-size:15px;}
+  div{margin:1rem;}
+  table{border-collapse: collapse; margin: 0.5rem auto;}
+  td{padding: 0.5rem 1rem;}
+  .content{display:flex;}
+  .mid{flex-direction:column;}
+  .mid table tr td{font-size:15px;}
+  ul{margin:auto; margin-bottom: 1rem;}
+  #prev_action, li{text-align: left;margin-bottom: 0.6rem;font-size:15px;}
+  .green_color{background-color:#20d62c;}
+  .gray_color{background-color:#bababa;}
+  .blue_color{background-color:#00b1e2;}
+  .yellow_color{background-color:#f2ad00;}
+  .red_color{background-color:#e20000;}
+  .lemon_color{background-color:#e6f700;}
+  .purple_color{background-color:#f200ee;}

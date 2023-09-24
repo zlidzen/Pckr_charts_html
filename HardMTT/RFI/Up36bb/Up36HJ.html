@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <link rel="stylesheet" href="../../../style.css">
+    <script src="../../../main.js"></script> 
+  </head>
+<body>  
+<div class='content'>
+    <div id='prev_action'>   </div>
+    <div class='mid'>
+    <H2 id='title'>MTT NL holdem-poker charts</H2>
+      <table>
+        <tr>
+          <td> <a href='Up36UTG.html'>UTG</a></td>
+          <td> <a href='Up36MP.html'>MP</a> </td>
+          <td class='gray_color'> <a href='Up36HJ.html'>HJ</a> </td>
+          <td> <a href='Up36CO.html'>CO</a> </td>
+          <td> <a href='Up36BTN.html'>BTN</a> </td>
+          <td> <a href='Up36SB.html'>SB</a> </td>
+        </tr>
+      </table>
+
+      <div id="chart">  </div>
+
+  </div>
+  <div id='post_action'>
+    <table>
+      2.2 / 2.5 / 3 bb
+      <tr><td class='red_color'>4-bet</td></tr>
+      <tr><td class='yellow_color'>Call vs 3-bet</td></tr>
+      <tr><td class='gray_color'>Fold vs 3-bet</td></tr>
+    </table>
+  </div>
+</div>
+</body>
+    <script type="text/javascript">
+      addChart();
+
+  let red_list = ['AA','KK'];
+  paint_ids(red_list, 'red_color');
+
+  let yellow_list = ['AKs','AQs','AJs','ATs','A9s','A8s','AKo','KQs',
+                    'KJs','AQo','QQ','QJs','JJ','JTs','TT','T9s','99',
+                    '88','77'];
+  paint_ids(yellow_list,'yellow_color');
+
+  let gray_list = ['A7s','A6s','A5s','A4s','A3s','A2s','KTs','K9s',
+                  'K8s','KQo','QTs','Q9s','Q8s','AJo','KJo','J9s',
+                  'J8s','ATo','T8s','98s','97s','87s','86s','76s',
+                  '66','65s','55','44','33','22'];
+  paint_ids(gray_list,'gray_color');
+</script>
+<script src="navigation.js"></script>
+</html>

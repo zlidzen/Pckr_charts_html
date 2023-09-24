@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../main.js"></script> 
+  </head>
+<body>  
+<div class='content'>
+    <div id='prev_action'>  </div>
+
+    <div class='mid'>
+    <H2 id='title'>MTT NL holdem-poker charts</H2>
+      <table>
+        <tr>
+          <td> <a href='100bbDefBBvsUTG.html'>BB vs UTG</a> </td>
+          <td> <a href='100bbDefBBvsUTG1.html'>BB vs UTG+1</a> </td>
+          <td> <a href='100bbDefBBvsMP.html'>BB vs MP</a> </td>
+          <td> <a href='100bbDefBBvsMP1.html'>BB vs MP+1</a> </td>
+          <td> <a href='100bbDefBBvsHJ.html'>BB vs HJ</a> </td>
+          <td> <a href='100bbDefBBvsCO.html'>BB vs CO</a> </td>
+          <td> <a href='100bbDefBBvsBTN.html'>BB vs BTN</a> </td>
+          <td class='gray_color'>BB vs SB</td>
+        </tr>
+      </table>
+          <div id='chart'>  </div>
+      </div>
+      <div id='post_action'>
+        <table>
+          <tr><td class='gray_color'>Call</td></tr>
+          <tr><td class='green_color'>3-bet / call vs 4-bet</td></tr>
+          <tr><td class='yellow_color'>Call or 3-bet / fold vs 4-bet</td></tr>
+        </table>
+      </div>
+    </div>
+    </body>
+    <script type="text/javascript">
+      addChart();
+
+      let green_list = ['AA','AKs','AQs','AJs','ATs','AKo','KK','KQs','KJs','AQo',
+                      'KQo','QQ','QJs','AJo','JJ','JTs','TT','T9s','99','98s','88'];
+      paint_ids(green_list, 'green_color');
+    
+      let yellow_list = ['A9s','A5s','A4s','A3s','A2s','KTs','K9s','QTs','Q9s','KJo',
+                        'J9s','ATo','T8s','T7s','97s','87s','86s','85s','77','76s',
+                        '75s','66','65s','55'];
+      paint_ids(yellow_list,'yellow_color');
+
+      let gray_list = ['A8s','A7s','A6s','K8s','K7s','K6s','K5s','K4s','K3s','K2s',
+                      'Q8s','Q7s','Q6s','Q5s','Q4s','Q3s','Q2s','QJo','J8s','J7s',
+                      'J6s','J5s','J4s','KTo','QTo','JTo','T6s','T5s','T4s',
+                      'A9o','K9o','Q9o','J9o','T9o','96s','95s','94s','A8o','K8o',
+                      'Q8o','J8o','T8o','98o','84s','A7o','K7o','Q7o','J7o','T7o',
+                      '97o','87o','74s','A6o','K6o','76o','64s','63s','A5o','54s',
+                      '53s','52s','A4o','44','43s','42s','A3o','33','32s','A2o','22'];
+      paint_ids(gray_list,'gray_color');
+    </script>
+<script src="navigation.js"></script>
+</html>

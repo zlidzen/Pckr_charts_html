@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <link rel="stylesheet" href="../../../style.css">
+    <script src="../../../main.js"></script> 
+  </head>
+<body>  
+<div class='content'>
+    <div id='prev_action'>  </div>
+    <div class='mid'>
+    <H2 id='title'>MTT NL holdem-poker charts</H2>
+      <table>
+        <tr>
+          <td> <a href='DefBB3betPUSH1625bbBBvsUTG.html'>BB vs UTG</a> </td>
+          <td> <a href='DefBB3betPUSH1625bbBBvsMP.html'>BB vs MP</a> </td>
+          <td> <a href='DefBB3betPUSH1625bbBBvsHJCO.html'>BB vs HJ/CO</a> </td>
+          <td class='gray_color'> <a href=''>BB vs BTN</a> </td>
+          <td> <a href='DefBB3betPUSH1625bbBBvsSB.html'>BB vs SB</a> </td>
+        </tr>
+      </table>
+
+      <div id="chart">  </div>
+
+  </div>
+  <div id='post_action'>
+    <table>
+      <tr><td class='green_color'>3-bet vs openrase + cold-call</td></tr>
+    </table>
+  </div>
+</div>
+</body>
+    <script type="text/javascript">
+      addChart();
+
+  let green_list = ['AA','AKs','AQs','AJs','ATs','A9s','A8s','A7s',
+                   'A6s','A5s','A4s','A3s','A2s','AKo','KK','KQs',
+                   'KJs','KTs','AQo','KQo','QQ','AJo','KJo','JJ',
+                   'ATo','TT','A9o','99','A8o','88','77','66','55',
+                   '44','33','22'];
+  paint_ids(green_list, 'green_color');
+</script>
+<script src="navigation.js"></script>
+</html>

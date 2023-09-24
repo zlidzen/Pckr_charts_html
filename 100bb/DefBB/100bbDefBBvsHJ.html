@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../main.js"></script> 
+  </head>
+<body>  
+<div class='content'>
+    <div id='prev_action'>  </div>
+
+    <div class='mid'>
+    <H2 id='title'>MTT NL holdem-poker charts</H2>
+      <table>
+        <tr>
+          <td> <a href='100bbDefBBvsUTG.html'>BB vs UTG</a> </td>
+          <td> <a href='100bbDefBBvsUTG1.html'>BB vs UTG+1</a> </td>
+          <td> <a href='100bbDefBBvsMP.html'>BB vs MP</a> </td>
+          <td> <a href='100bbDefBBvsMP1.html'>BB vs MP+1</a> </td>
+          <td class='gray_color'>BB vs HJ</td>
+          <td> <a href='100bbDefBBvsCO.html'>BB vs CO</a> </td>
+          <td> <a href='100bbDefBBvsBTN.html'>BB vs BTN</a> </td>
+          <td> <a href='100bbDefBBvsSB.html'>BB vs SB</a> </td>
+        </tr>
+      </table>
+          <div id='chart'>  </div>
+      </div>
+      <div id='post_action'>
+        <table>
+          <tr><td class='gray_color'>Call</td></tr>
+          <tr><td class='green_color'>3-bet / call vs 4-bet</td></tr>
+          <tr><td class='yellow_color'>Call or 3-bet / fold vs 4-bet</td></tr>
+        </table>
+      </div>
+    </div>
+    </body>
+    <script type="text/javascript">
+      addChart();
+
+      let green_list = ['AA','AKs','AQs','AKo','KK','KQs','QQ','JJ'];
+      paint_ids(green_list, 'green_color');
+    
+      let yellow_list = ['AJs','ATs','A5s','A4s','KJs','QJs','JTs','TT'];
+      paint_ids(yellow_list,'yellow_color');
+
+      let gray_list = ['A9s','A8s','A7s','A6s','A3s','A2s',
+                      'KTs','K9s','K8s','K7s','K6s','AQo','KQo',
+                      'QTs','Q9s','Q8s','Q7s','AJo','KJo','QJo','J9s',
+                      'J8s','ATo','KTo','QTo','JTo','T9s','T8s','T7s','99',
+                      '98s','97s','96s','88','87s','86s','77','76s','75s',
+                      '66','65s','55','54s','44','33','22'];
+      paint_ids(gray_list,'gray_color');
+    </script>
+<script src="navigation.js"></script>
+</html>

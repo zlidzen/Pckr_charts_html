@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../main.js"></script> 
+  </head>
+<body>  
+<div class='content'>
+    <div id='prev_action'>  </div>
+    
+    <div class='mid'>
+    <H2 id='title'>MTT NL holdem-poker charts</H2>
+      <table>
+        <tr>
+          <td> <a href='100bbC3betUTG.html'>UTG vs UTG</a> </td>
+          <td> <a href='100bbC3betMPvsUTG.html'> MP vs UTG</a> </td>
+          <td> <a href='100bbC3betHJvsUTG.html'>HJ vs UTG</a> </td>
+          <td> <a href='100bbC3betCOvsUTG.html'>CO vs UTG</a> </td>
+          <td> <a href='100bbC3betBTNvsUTG.html'>BTN vs UTG</a> </td>
+          <td> <a href='100bbC3betSBvsUTG.html'>SB vs UTG</a> </td>
+          <td> <a href='100bbC3betHJvsMP.html'>HJ vs MP</a> </td>
+          <td> <a href='100bbC3betCOvsMP.html'>CO vs MP</a> </td>
+        </tr>
+        <tr>
+          <td class='gray_color'>BTN vs MP</td>
+          <td> <a href='100bbC3betSBvsMP.html'>SB vs MP</a> </td>
+          <td> <a href='100bbC3betCOvsHJ.html'>CO vs HJ</a> </td>
+          <td> <a href='100bbC3betBTNvsHJ.html'>BTN vs HJ</a> </td>
+          <td> <a href='100bbC3betSBvsHJ.html'>SB vs HJ</a> </td>
+          <td> <a href='100bbC3betBTNvsCO.html'>BTN vs CO</a> </td>
+          <td> <a href='100bbC3betSBvsCO.html'>SB vs CO</a> </td>
+          <td><a href='100bbC3betSBvsBTN.html'>SB vs BTN</a> </td>
+        </tr>
+      </table>
+
+      <div id='chart'>  </div>
+
+  </div>
+  <div id='post_action'>
+    <table>
+      <tr><td class='gray_color'>Call</td></tr>
+      <tr><td class='green_color'>3-bet / call vs 4-bet</td></tr>
+      <tr><td class='yellow_color'>Call or 3-bet / fold vs 4-bet</td></tr>
+    </table>
+  </div>
+</div>
+</body>
+    <script type="text/javascript">
+      addChart();
+
+  let green_list = ['AA','AKs','AKo','KK','QQ'];
+  paint_ids(green_list, 'green_color');
+
+  let gray_list = ['AQs','AJs','ATs','KQs','KJs','KTs','AQo','QJs','QTs',
+                  'JTs','T9s','99','98s','88','77','66','55'];
+  paint_ids(gray_list,'gray_color');
+
+  let yellow_list = ['A5s','A4s','JJ','TT'];
+  paint_ids(yellow_list,'yellow_color');  
+</script>
+<script src="navigation.js"></script>
+</html>

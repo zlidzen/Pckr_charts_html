@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../main.js"></script> 
+  </head>
+<body>  
+<div class='content'>
+    <div id='prev_action'>  </div>
+    <div class='mid'>
+    <H2 id='title'>MTT NL holdem-poker charts</H2>
+      <table>
+        <tr>
+          <td class='gray_color'>UTG</td>
+          <td> <a href='PF-MP.html'>MP</a> </td>
+          <td> <a href='PF-HJ.html'>HJ</a> </td>
+          <td> <a href='PF-CO.html'>CO</a> </td>
+          <td> <a href='PF-BTN.html'>BTN</a> </td>
+          <td> <a href='PF-SB.html'>SB</a> </td>
+        </tr>
+      </table>
+
+      <div id="chart">  </div>
+
+  </div>
+  <div id='post_action'>
+    <table>
+      <tr><td class='blue_color'>14 - 15 bb</td></tr>
+      <tr><td class='lemon_color'>12 - 13 bb</td></tr>
+      <tr><td class='green_color'>10 - 11 bb</td></tr>
+      <tr><td class='red_color'>8 - 9 bb</td></tr>
+      <tr><td class='purple_color'>6 - 7 bb</td></tr>
+      <tr><td class='yellow_color'>4 - 5 bb</td></tr>
+    </table>
+  </div>
+</div>
+</body>
+    <script type="text/javascript">
+      addChart();
+
+  let blue_list = ['AA','AKs','AQs','AJs','ATs','AKo','KK','KQs','KJs',
+                  'AQo','QQ','QJs','JJ','TT','99','88'];
+  paint_ids(blue_list, 'blue_color');
+
+  let lemon_list = ['KTs','QTs','AJo','JTs','77'];
+  paint_ids(lemon_list,'lemon_color');
+
+  let green_list = ['A9s','KQo','66','55'];
+  paint_ids(green_list,'green_color');
+
+  let red_list = ['A8s','A7s','K9s','Q9s','J9s','ATo','T9s','44','33'];
+  paint_ids(red_list, 'red_color');
+
+  let purple_list = ['A6s','A5s','A4s','A3s','A2s','KJo','A9o','A8o','22'];
+  paint_ids(purple_list,'purple_color');
+
+  let yellow_list = ['K8s','K7s','K6s','Q8s','QJo','KTo','98s','A7o','A6o',
+                    'A5o','A4o'];
+  paint_ids(yellow_list,'yellow_color');
+
+</script>
+<script src="navigation.js"></script>
+</html>
