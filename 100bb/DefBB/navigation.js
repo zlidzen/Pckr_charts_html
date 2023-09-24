@@ -3,5 +3,3 @@ const nav100bb = [
     {link:'../CallAnd3bet/100bbC3betUTG.html', caption:'Call and 3-bet', isActive:false},
     {link:null, caption:'BB defence', isActive:true}
 ]
-
-document.getElementById(navBlockName).appendChild(createNav(nav100bb, '100bb+'));

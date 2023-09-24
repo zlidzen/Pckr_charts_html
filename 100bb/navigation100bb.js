@@ -16,5 +16,6 @@ const navHMTT = [
   {link:'../../HardMTT/DefBB/3betPush16-25bb/DefBB3betPUSH1625bbBBvsUTG.html', caption:'BB 3bet PUSH 16-25bb', isActive:false}
 ]
 
+document.getElementById(navBlockName).appendChild(createNav(nav100bb, '100bb+'));
 document.getElementById(navBlockName).appendChild(createNav(navEMTT, 'EasyMTT'));
 document.getElementById(navBlockName).appendChild(createNav(navHMTT, 'HardMTT'));
