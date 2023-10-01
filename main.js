@@ -71,7 +71,7 @@ function createNav(navLinksArray, navName){
 
   navLinksArray.forEach(
     (navLink) => {
-      if (navLink.isActive) {
+      if (navLink.link === null) {
         ul.appendChild(liGray(navLink.caption));
       } else {
         ul.appendChild(liLink(navLink.link, navLink.caption));
