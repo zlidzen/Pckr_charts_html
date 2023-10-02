@@ -2,27 +2,42 @@
 <html>
   <head>
     <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="main.js"></script> 
   </head>
-  <body>
-    <header></header>
-    <main class='content'>
-      <nav id='prev_action'>
-        <p>Navigation block</p>
-      </nav>
+  <body calss="container-xxl">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <span class="fs-4">Header</span>
+    </header>
 
-      <div class='mid'>
-        <H2 id='title'> <a href="100bb/Open/100bbOpenBTN.html">MTT NL holdem-poker charts (click)</a></H2>
-        <div id='chart'> Charts </div>
-        <div id='hint'> Hints </div>
-      </div>
+    <main class="container">
+      <div class="d-flex border rounded-3 justify-content-center p-3">
+        <nav class="nav flex-column col-2 m-2" id='prev_action'>
+          <!-- <a class="nav-link active" aria-current="page" href="#">Active</a>
+          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+        </nav>
 
-      <div id='left_side'>
-        <div id='settings'> Settings </div>
-        <div id='post_action'> Actions </div>
-        <div id='advertising'> Ad </div>
-      </div>
+        <div class="col-8 m-2">
+          <H2 id='title'> <a href="100bb/Open/100bbOpenBTN.html">MTT NL holdem-poker charts (click)</a></H2>
+          <div id='chart'> </div>
+          <div id='hint'> Hints </div>
+        </div>
+
+        <div class="col m-2" id='left_side'>
+          <div id='settings'> Settings </div>
+          <div id='post_action'> Actions </div>
+          <div id='advertising'> Ad </div>
+        </div>
+    </div>
     </main>
     <footer></footer>
   </body>
+  <script type="text/javascript">
+    addChart();
+  </script>
+  <script src="100bb/Open/navigation.js"></script>
+  <script src="100bb/navigation100bb.js"></script>
 </html>
