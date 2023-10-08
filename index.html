@@ -8,27 +8,34 @@
   </head>
   <body calss="container-xxl">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <span class="fs-4">Header</span>
+      <span class="fs-4"><a href="100bb/Open/100bbOpenBTN.html">MTT NL holdem-poker charts (click)</a></span>
     </header>
 
     <main class="container">
       <div class="d-flex border rounded-3 justify-content-center p-3">
-        <nav class="nav flex-column col-2 m-2" id='prev_action'>
-          <!-- <a class="nav-link active" aria-current="page" href="#">Active</a>
-          <a class="nav-link" href="#">Link</a>
-          <a class="nav-link" href="#">Link</a>
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
-        </nav>
+        <nav class="nav flex-column col-2 m-2" id='prev_action'> </nav>
 
         <div class="col-8 m-2">
-          <H2 id='title'> <a href="100bb/Open/100bbOpenBTN.html">MTT NL holdem-poker charts (click)</a></H2>
+          <div class="btn-group gap-1 d-flex justify-content-center m-2" role="group" id='position'>
+            <a class="btn btn-outline-success" href="#" role="button">UTG</a>
+            <a class="btn btn-outline-success" href="#" role="button">MP</a>
+            <a class="btn btn-outline-success" href="#" role="button">HJ</a>
+            <a class="btn btn-outline-success" href="#" role="button">CO</a>
+            <a class="btn btn-outline-success" href="#" role="button">BTN</a>
+            <a class="btn btn-outline-success" href="#" role="button">SB</a>
+            <a class="btn btn-outline-success" href="#" role="button">BTN</a>
+          </div>
           <div id='chart'> </div>
           <div id='hint'> Hints </div>
         </div>
 
         <div class="col m-2" id='left_side'>
           <div id='settings'> Settings </div>
-          <div id='post_action'> Actions </div>
+          <div class="d-grid gap-1 m-2" role="group" id='post_action'> 
+            <a class="btn btn-primary" href="#" role="button">Rase</a>
+            <a class="btn btn-warning" href="#" role="button">Re-Rase</a>
+            <a class="btn btn-danger" href="#" role="button">All-In</a>
+          </div>
           <div id='advertising'> Ad </div>
         </div>
     </div>
