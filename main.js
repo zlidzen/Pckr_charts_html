@@ -22,11 +22,15 @@ function addChart(){
   if (!chartEl) return;
 
   var table = document.createElement('table');
+  table.setAttribute("class", "table table-bordered");
+
+  var tableBody = document.createElement('tbody');
 
   rows.forEach(
-    (r) => {table.appendChild(buildRow(r));}
+    (r) => {tableBody.appendChild(buildRow(r));}
   );
 
+  table.appendChild(tableBody);
   chartEl.appendChild(table);
 }
 
