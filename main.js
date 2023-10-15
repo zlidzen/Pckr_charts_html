@@ -16,9 +16,10 @@ const row2 = ['A2o','K2o','Q2o','J2o','T2o','92o','82o','72o','62o','52o','42o',
 const rows = [rowA, rowK, rowQ, rowJ, rowT, row9, row8, row7, row6, row5, row4, row3, row2];
 
 const navBlockName = 'prev_action';
+const postActions = 'post_action';
 
 function addChart(){
-  var chartEl = document.getElementById('chart')
+  var chartEl = document.getElementById('chart');
   if (!chartEl) return;
 
   var table = document.createElement('table');
@@ -44,7 +45,7 @@ function buildRow(values){
       row.appendChild(col);
     });
     return row;
-  }
+}
 
 function paint_ids(list, color){
   list.forEach((el)=>{
@@ -87,4 +88,17 @@ function createNav(navLinksArray, navName){
   nav.appendChild(ul);
 
   return nav;
+}
+
+function createPostActions(dict){
+  var postEl = document.getElementById(postActions);
+
+  for (var key in dict){
+    var action = document.createElement('a');
+    action.setAttribute("class", "btn");
+    action.setAttribute("style", "background-color:" + key + ";");
+    action.setAttribute("role", "button");
+    action.innerText += dict[key];
+    postEl.appendChild(action);
+  }
 }

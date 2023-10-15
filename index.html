@@ -11,7 +11,7 @@
     </header>
 
     <main class="container">
-      <div class="d-flex border rounded-3 justify-content-center p-3">
+      <div class="d-flex justify-content-center p-3">
         <nav class="nav flex-column col-2 m-2" id='prev_action'> </nav>
 
         <div class="col-8 m-2">
@@ -25,7 +25,7 @@
             <a class="btn btn-outline-success" href="#" role="button">BTN</a>
           </div>
           <div id='chart'> </div>
-          <div id='hint'> Hints </div>
+          <div id='hint' class="border rounded-3"> Hints </div>
         </div>
 
         <div class="col m-2" id='left_side'>
@@ -35,12 +35,8 @@
               <label class="form-check-label" for="flexSwitchCheckChecked">Luck on/off</label>
             </div>
           </div>
-          <div class="d-grid gap-1 m-2" role="group" id='post_action'> 
-            <a class="btn btn-primary" href="#" role="button">Rase</a>
-            <a class="btn btn-warning" href="#" role="button">Re-Rase</a>
-            <a class="btn btn-danger" href="#" role="button">All-In</a>
-          </div>
-          <div id='advertising'> Ad </div>
+          <div class="d-grid gap-1 m-2" role="group" id='post_action'>  </div>
+          <div id='advertising' class="border rounded-3"> Ad </div>
         </div>
     </div>
     </main>
@@ -48,6 +44,12 @@
   </body>
   <script type="text/javascript">
     addChart();
+    let dict = {
+      "#e20000": "Rase",
+      "#e6f700": "Re-Rase",
+      "#f200ee": "All-In"
+    }
+    createPostActions(dict)
   </script>
   <script src="100bb/Open/navigation.js"></script>
   <script src="100bb/navigation100bb.js"></script>
