@@ -5,59 +5,75 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="../../main.js"></script> 
   </head>
-<body>  
-<div class='content'>
-    <div id='prev_action'>  </div>
-    
-    <div class='mid'>
-    <H2 id='title'>MTT NL holdem-poker charts</H2>
-      <table>
-        <tr>
-          <td> <a href='100bbC3betUTG.html'>UTG vs UTG</a> </td>
-          <td> <a href='100bbC3betMPvsUTG.html'> MP vs UTG</a> </td>
-          <td> <a href='100bbC3betHJvsUTG.html'>HJ vs UTG</a> </td>
-          <td> <a href='100bbC3betCOvsUTG.html'>CO vs UTG</a> </td>
-          <td> <a href='100bbC3betBTNvsUTG.html'>BTN vs UTG</a> </td>
-          <td> <a href='100bbC3betSBvsUTG.html'>SB vs UTG</a> </td>
-          <td> <a href='100bbC3betHJvsMP.html'>HJ vs MP</a> </td>
-          <td><a href='100bbC3betCOvsMP.html'>CO vs MP</a> </td>
-        </tr>
-        <tr>
-          <td> <a href='100bbC3betBTNvsMP.html'>BTN vs MP</a> </td>
-          <td> <a href='100bbC3betSBvsMP.html'>SB vs MP</a> </td>
-          <td> <a href='100bbC3betCOvsHJ.html'>CO vs HJ</a> </td>
-          <td class='gray_color'>BTN vs HJ</td>
-          <td> <a href='100bbC3betSBvsHJ.html'>SB vs HJ</a> </td>
-          <td> <a href='100bbC3betBTNvsCO.html'>BTN vs CO</a> </td>
-          <td> <a href='100bbC3betSBvsCO.html'>SB vs CO</a> </td>
-          <td><a href='100bbC3betSBvsBTN.html'>SB vs BTN</a> </td>
-        </tr>
-      </table>
-
-          <div id='chart'>  </div>
-
+  <body calss="container-xxl">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <span class="fs-4"><a href="#">MTT NL holdem-poker charts</a></span>
+    </header>
+  
+  <main class='container'>
+    <div class="d-flex justify-content-center p-3">
+      <nav class="nav flex-column col-2 m-2" id='prev_action'> </nav>
+  
+      <div class="col-8 m-2">
+        <div class="btn-group gap-1 d-flex justify-content-evenly m-2 flex-wrap" role="group" id='position'>  </div>
+        <div id='chart'> </div>
+        <div id='hint' class="border rounded-3"> Hints </div>
       </div>
-      <div id='post_action'>
-        <table>
-          <tr><td class='gray_color'>Call</td></tr>
-          <tr><td class='green_color'>3-bet / call vs 4-bet</td></tr>
-          <tr><td class='yellow_color'>Call or 3-bet / fold vs 4-bet</td></tr>
-        </table>
+  
+    <div class="col m-2" id='right_side'>
+      <div id='settings'> Settings
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked">Luck on/off</label>
+        </div>
       </div>
+      <div class="d-grid gap-1 m-2" role="group" id='post_action'>  </div>
+      <div id='advertising' class="border rounded-3"> Here can be advertisement </div>
     </div>
-    </body>
-        <script type="text/javascript">
-      addChart();
+  
+    </div>
+  </main>
+  <footer></footer>
+  </body>
+    <script type="text/javascript">
+  let positions = {
+    "100bbC3betUTG.html":"UTG vs UTG",
+    "100bbC3betMPvsUTG.html":"MP vs UTG",
+    "100bbC3betHJvsUTG.html":"HJ vs UTG",
+    "100bbC3betCOvsUTG.html":"CO vs UTG",
+    "100bbC3betBTNvsUTG.html":"BTN vs UTG",
+    "100bbC3betSBvsUTG.html":"SB vs UTG",
+    "100bbC3betHJvsMP.html":"HJ vs MP",
+    "100bbC3betCOvsMP.html":"CO vs MP",
+    "100bbC3betBTNvsMP.html":"BTN vs MP",
+    "100bbC3betSBvsMP.html":"SB vs MP",
+    "100bbC3betCOvsHJ.html":"CO vs HJ",
+    "#":"BTN vs HJ",
+    "100bbC3betSBvsHJ.html":"SB vs HJ",
+    "100bbC3betBTNvsCO.html":"BTN vs CO",
+    "100bbC3betSBvsCO.html":"SB vs CO",
+    "100bbC3betSBvsBTN.html":"SB vs BTN"
+  }
+  createPositionBlock(positions);
+
+  addChart();
+
+  let postActionsDict = {
+    [gray_color] : "Call",
+    [green_color] : "3-bet / call vs 4-bet",
+    [yellow_color] : "Call or 3-bet / fold vs 4-bet"
+  }
+  createPostActions(postActionsDict);
 
 
       let green_list = ['AA','AKs','AKo','KK','QQ'];
-      paint_ids(green_list, 'green_color');
+      paint_ids_n(green_list, green_color);
     
       let gray_list = ['KJs','KTs','AQo','KQo','QJs','QTs','AJo','JTs','TT','99','88','77','66'];
-      paint_ids(gray_list,'gray_color');
+      paint_ids_n(gray_list,gray_color);
     
       let yellow_list = ['AQs','AJs','ATs','A5s','A4s','KQs','JJ','87s','76s'];
-      paint_ids(yellow_list,'yellow_color');  
+      paint_ids_n(yellow_list,yellow_color);  
     </script>
     <script src="navigation.js"></script>
     <script src="../navigation100bb.js"></script>
