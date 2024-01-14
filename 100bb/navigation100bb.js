@@ -17,5 +17,5 @@ const navHMTT = [
 ]
 
 document.getElementById(navBlockName).appendChild(createNav(nav100bb, '100bb+'));
-document.getElementById(navBlockName).appendChild(createNav(navEMTT, 'EasyMTT'));
-document.getElementById(navBlockName).appendChild(createNav(navHMTT, 'HardMTT'));
+document.getElementById(navBlockName).appendChild(createNav(navEMTT, 'Easy MTT'));
+document.getElementById(navBlockName).appendChild(createNav(navHMTT, 'Hard MTT'));
