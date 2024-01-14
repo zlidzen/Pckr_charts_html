@@ -2,54 +2,74 @@
 <html>
   <head>
     <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
-    <link rel="stylesheet" href="../../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="../../main.js"></script> 
   </head>
-<body>  
-<div class='content'>
-    <div id='prev_action'>  </div>
-    <div class='mid'>
-    <H2 id='title'>MTT NL holdem-poker charts</H2>
-      <table>
-        <tr>
-          <td> <a href='RFIUTG.html'>UTG</a> </td>
-          <td> <a href='RFIMP.html'>MP</a> </td>
-          <td class='gray_color'>HJ</td>
-          <td> <a href='RFICO.html'>CO</a> </td>
-          <td> <a href='RFIBTN.html'>BTN</a> </td>
-          <td> <a href='RFISB.html'>SB</a> </td>
-        </tr>
-      </table>
+  <body calss="container-xxl">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <span class="fs-4"><a href="#">MTT NL holdem-poker charts</a></span>
+    </header>
+  
+  <main class='container'>
+    <div class="d-flex justify-content-center p-3">
+      <nav class="nav flex-column col-2 m-2" id='prev_action'> </nav>
+  
+      <div class="col-8 m-2">
+        <div class="btn-group gap-1 d-flex justify-content-evenly m-2 flex-wrap" role="group" id='position'>  </div>
+        <div id='chart'> </div>
+        <div id='hint' class="border rounded-3"> Hints </div>
+      </div>
+  
+    <div class="col m-2" id='right_side'>
+      <div id='settings'> Settings
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked">Luck on/off</label>
+        </div>
+      </div>
+      <div class="d-grid gap-1 m-2" role="group" id='post_action'> 
+        2.2 / 2.5 / 3 bb
+       </div>
+      <div id='advertising' class="border rounded-3"> Here can be advertisement </div>
+    </div>
+  
+    </div>
+  </main>
+  <footer></footer>
+  </body>
+<script type="text/javascript">
+  let positions = {
+    "RFIUTG.html":"UTG",
+    "RFIMP.html":"MP",
+    "#":"HJ",
+    "RFICO.html":"CO",
+    "RFIBTN.html":"BTN",
+    "RFISB.html":"SB"
+  }
+  createPositionBlock(positions);
 
-      <div id="chart">  </div>
+  addChart();
 
-  </div>
-  <div id='post_action'>
-    <table>
-      2.2 / 2.5 / 3 bb
-      <tr><td class='red_color'>4-bet</td></tr>
-      <tr><td class='yellow_color'>Call vs 3-bet</td></tr>
-      <tr><td class='blue_color'>Fold vs 3-bet</td></tr>
-    </table>
-  </div>
-</div>
-</body>
-    <script type="text/javascript">
-      addChart();
+  let postActionsDict = {
+    [red_color]:"4-bet",
+    [yellow_color]:"Call vs 3-bet",
+    [blue_color]:"Fold vs 3-bet"
+  }
+  createPostActions(postActionsDict);
 
   let red_list = ['AA','KK'];
-  paint_ids(red_list, 'red_color');
+  paint_ids_n(red_list, red_color);
 
   let yellow_list = ['AKs','AQs','AJs','ATs','A9s','A8s','AKo','KQs',
                     'KJs','AQo','QQ','QJs','JJ','JTs','TT','T9s','99',
                     '88','77'];
-  paint_ids(yellow_list,'yellow_color');
+  paint_ids_n(yellow_list,yellow_color);
 
   let blue_list = ['A7s','A6s','A5s','A4s','A3s','A2s','KTs','K9s',
                   'K8s','KQo','QTs','Q9s','Q8s','AJo','KJo','J9s',
                   'J8s','ATo','T8s','98s','97s','87s','86s','76s',
                   '66','65s','55','44','33','22'];
-  paint_ids(blue_list,'blue_color');
+  paint_ids_n(blue_list,blue_color);
 </script>
 <script src="navigation.js"></script>
 <script src="../navigationEMTT.js"></script>
