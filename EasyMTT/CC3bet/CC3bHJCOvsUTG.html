@@ -2,53 +2,70 @@
 <html>
   <head>
     <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
-    <link rel="stylesheet" href="../../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="../../main.js"></script> 
   </head>
-<body>  
-<div class='content'>
-    <div id='prev_action'>  </div>
-    <div class='mid'>
-    <H2 id='title'>MTT NL holdem-poker charts</H2>
-      <table>
-        <tr>
-          <td> <a href='CC3bUTG.html'>UTG vs UTG</a> </td>
-          <td> <a href='CC3bMPvsUTGMP.html'>MP vs UTG/MP</a> </td>
-          <td class='gray_color'>HJ/CO vs UTG</td>
-          <td> <a href='CC3bHJCOvsMPHJ.html'>HJ/CO vs MP/HJ</a> </td>
-          <td> <a href='CC3bBTNvsUTG.html'>BTN vs UTG</a> </td>
-          <td> <a href='CC3bBTNvsMP.html'>BTN vs MP</a> </td>
-        </tr>
-        <tr>
-          <td> <a href='CC3bBTNvsHJCO.html'>BTN vs HJ/CO</a> </td>
-          <td> <a href='CC3bSBvsUTG.html'>SB vs UTG</a> </td>
-          <td> <a href='CC3bSBvsMP.html'>SB vs MP</a> </td>
-          <td> <a href='CC3bSBvsHJCO.html'>SB vs HJ/CO</a> </td>
-          <td> <a href='CC3bSBvsBTN.html'>SB vs BTN</a> </td>
-        </tr>
-      </table>
+  <body calss="container-xxl">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <span class="fs-4"><a href="#">MTT NL holdem-poker charts</a></span>
+    </header>
+  
+  <main class='container'>
+    <div class="d-flex justify-content-center p-3">
+      <nav class="nav flex-column col-2 m-2" id='prev_action'> </nav>
+  
+      <div class="col-8 m-2">
+        <div class="btn-group gap-1 d-flex justify-content-evenly m-2 flex-wrap" role="group" id='position'>  </div>
+        <div id='chart'> </div>
+        <div id='hint' class="border rounded-3"> Hints </div>
+      </div>
+  
+    <div class="col m-2" id='right_side'>
+      <div id='settings'> Settings
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked">Luck on/off</label>
+        </div>
+      </div>
+      <div class="d-grid gap-1 m-2" role="group" id='post_action'>  </div>
+      <div id='advertising' class="border rounded-3"> Here can be advertisement </div>
+    </div>
+  
+    </div>
+  </main>
+  <footer></footer>
+  </body>
+<script type="text/javascript">
+  let positions = {
+    "CC3bUTG.html":"UTG vs UTG",
+    "CC3bMPvsUTGMP.html":"MP vs UTG/MP",
+    "#":"HJ/CO vs UTG",
+    "CC3bHJCOvsMPHJ.html":"HJ/CO vs MP/HJ",
+    "CC3bBTNvsUTG.html":"BTN vs UTG",
+    "CC3bBTNvsMP.html":"BTN vs MP",
+    "CC3bBTNvsHJCO.html":"BTN vs HJ/CO",
+    "CC3bSBvsUTG.html":"SB vs UTG",
+    "CC3bSBvsMP.html":"SB vs MP",
+    "CC3bSBvsHJCO.html":"SB vs HJ/CO",
+    "CC3bSBvsBTN.html":"SB vs BTN"
+  }
+  createPositionBlock(positions);
 
-      <div id="chart">  </div>
+  addChart();
 
-  </div>
-  <div id='post_action'>
-    <table>
-      <tr><td class='red_color'>3-bet</td></tr>
-      <tr><td class='yellow_color'>Cold Call</td></tr>
-    </table>
-  </div>
-</div>
-</body>
-    <script type="text/javascript">
-      addChart();
+  let postActionsDict = {
+    [red_color]:"3-bet",
+    [yellow_color]:"Cold Call"
+  }
+  createPostActions(postActionsDict);
 
   let red_list = ['AA','AKs','AKo','KK','QQ'];
-  paint_ids(red_list, 'red_color');
+  paint_ids_n(red_list, red_color);
 
   let yellow_list = ['AQs','AJs','ATs','A9s','A8s','KQs','KJs','KTs',
                     'AQo','QJs','QTs','JJ','JTs','TT','T9s','99',
                     '98s','88','77','66','55','44','33','22'];
-  paint_ids(yellow_list,'yellow_color');
+  paint_ids_n(yellow_list,yellow_color);
 </script>
 <script src="navigation.js"></script>
 <script src="../navigationEMTT.js"></script>
