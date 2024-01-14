@@ -17,6 +17,16 @@ const rows = [rowA, rowK, rowQ, rowJ, rowT, row9, row8, row7, row6, row5, row4, 
 
 const navBlockName = 'prev_action';
 const postActions = 'post_action';
+const positionBlock = 'position';
+
+//colors
+const green_color = "#20d62c";
+const gray_color = "#bababa";
+const blue_color = "#00b1e2";
+const yellow_color = "#f2ad00";
+const red_color = "#e20000";
+const lemon_color = "#e6f700";
+const purple_color = "#f200ee";
 
 function addChart(){
   var chartEl = document.getElementById('chart');
@@ -101,4 +111,27 @@ function createPostActions(dict){
     action.innerText += dict[key];
     postEl.appendChild(action);
   }
+}
+
+function createPositionBlock(dict){
+  var posEl = document.getElementById(positionBlock);
+
+  for (var key in dict) {
+    var pos = document.createElement('a');
+    if (key === '#') {
+      pos.setAttribute("class", "btn btn-success");
+    } else {
+      pos.setAttribute("class", "btn btn-outline-success");
+    }
+    pos.setAttribute("role", "button");
+    pos.setAttribute("href", key);
+    pos.innerText += dict[key];
+    posEl.appendChild(pos);
+  }
+}
+
+function paint_ids_n(list, color){
+  list.forEach((el)=>{
+    document.getElementById(el).setAttribute('style', 'background-color:'+ color);
+  });
 }
