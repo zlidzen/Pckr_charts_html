@@ -135,3 +135,13 @@ function paint_ids_n(list, color){
     document.getElementById(el).setAttribute('style', 'background-color:'+ color);
   });
 }
+
+function handleLuck(cb) {
+  var caption = "Luck ";
+  if (cb.checked){
+    caption += "ON";
+  } else {
+    caption += "OFF";
+  }
+  document.getElementById("luckLabel").innerText = caption;
+}
