@@ -5,61 +5,67 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="../../../main.js"></script> 
   </head>
-<body>  
-<div class='content'>
-    <div id='prev_action'>  </div>
-    <div class='mid'>
-    <H2 id='title'>MTT NL holdem-poker charts</H2>
-      <table>
-        <tr>
-          <td><a href='CC3bet16-25bbUTG.html'>UTG</a> </td>
-          <td> <a href='CC3bet16-25bbMP-UTGMP.html'>MP-UTG/MP</a> </td>
-          <td> <a href='CC3bet16-25bbHJCO-UTG.html'>HJ/CO-UTG</a> </td>
-          <td> <a href='CC3bet16-25bbHJCO-MPHJ.html'>HJ/CO-MP/HJ</a> </td>
-          <td> <a href='CC3bet16-25bbBTN-UTG.html'>BTN-UTG</a> </td>
-          <td> <a href='CC3bet16-25bbBTN-MP.html'>BTN-MP</a> </td>
-        </tr>
-        <tr>
-          <td> <a href='CC3bet16-25bbBTN-HJCO.html'>BTN-HJ/CO</a> </td>
-          <td> <a href='CC3bet16-25bbSB-UTG.html'>SB-UTG</a> </td>
-          <td class='gray_color'> <a href=''>SB-MP</a> </td>
-          <td> <a href='CC3bet16-25bbSB-HJCO.html'>SB-HJ/CO</a> </td>
-          <td> <a href='CC3bet16-25bbSB-BTN.html'>SB-BTN</a> </td>
-        </tr>
-      </table>
-
-      <div id="chart">  </div>
-
-  </div>
-  <div id='post_action'>
-    <table>
-      <tr><td class='green_color'>Cold-Call</td></tr></tr>
-      <tr><td class='red_color'>3-bet or 3b-PUSH &lt;20bb</td></tr>
-      <tr><td class='lemon_color'>3-bet PUSH</td></tr>
-      <tr><td class='blue_color'>3-bet PUSH &lt;20bb</td></tr>
-    </table>
-  </div>
-</div>
-</body>
-    <script type="text/javascript">
+  <body calss="container-xxl">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <span class="fs-4"><a href="#">MTT NL holdem-poker charts</a></span>
+    </header>
+  
+  <main class='container'>
+    <div class="d-flex justify-content-center p-3">
+      <nav class="nav flex-column col-2 m-2" id='prev_action'> </nav>
+  
+      <div class="col-8 m-2">
+        <div class="btn-group gap-1 d-flex justify-content-evenly m-2 flex-wrap" role="group" id='position'>  </div>
+        <div id='chart'> </div>
+        <div id='hint' class="border rounded-3"> Hints </div>
+      </div>
+  
+    <div class="col m-2" id='right_side'>
+      <div id='settings'> Settings
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked">Luck on/off</label>
+        </div>
+      </div>
+      <div class="d-grid gap-1 m-2" role="group" id='post_action'>  </div>
+      <div id='advertising' class="border rounded-3"> Here can be advertisement </div>
+    </div>
+  
+    </div>
+  </main>
+  <footer></footer>
+  </body>
+  <script type="text/javascript">
   let positions = {
-
+          "CC3bet16-25bbUTG.html":"UTG",
+          "CC3bet16-25bbMP-UTGMP.html":"MP-UTG/MP",
+          "CC3bet16-25bbHJCO-UTG.html":"HJ/CO-UTG",
+          "CC3bet16-25bbHJCO-MPHJ.html":"HJ/CO-MP/HJ",
+          "CC3bet16-25bbBTN-UTG.html":"BTN-UTG",
+          "CC3bet16-25bbBTN-MP.html":"BTN-MP",
+          "CC3bet16-25bbBTN-COHJ.html":"BTN-HJ/CO",
+          "CC3bet16-25bbSB-UTG.html":"SB-UTG",
+          "#":"SB-MP",
+          "CC3bet16-25bbSB-HJCO.html":"SB-HJ/CO",
+          "CC3bet16-25bbSB-BTN.html":"SB-BTN"
   }
   createPositionBlock(positions);
-      addChart();
+  addChart();
+
+  let postActionsDict = {
+      [green_color]:"Cold-Call",
+      [red_color]:"3-bet or 3b-PUSH &lt;20bb",
+      [lemon_color]:"3-bet PUSH",
+      [blue_color]:"3-bet PUSH &lt;20bb"
+  }
+  createPostActions(postActionsDict);
 
   let green_list = ['A9s','A8s','KTs','K9s',
                    'KQo','QJs','QTs','AJo','JTs','T9s','98s'];
-  paint_ids_n(green_list,'green_color');
-
-  let red_list = ['AA','KK','QQ'];
-  paint_ids_n(red_list, 'red_color');
-
-  let lemon_list = ['AKs','AQs','AKo','AQo','JJ','TT','99','88'];
-  paint_ids_n(lemon_list,'lemon_color');
-
-  let blue_list = ['AJs','ATs','KQs','KJs','77','66'];
-  paint_ids_n(blue_list,'blue_color');
+  paint_ids_n(green_list, green_color);
+  paint_ids_n(['AA','KK','QQ'], red_color);
+  paint_ids_n(['AKs','AQs','AKo','AQo','JJ','TT','99','88'], lemon_color);
+  paint_ids_n(['AJs','ATs','KQs','KJs','77','66'], blue_color);
 </script>
 <script src="navigation.js"></script>
 <script src="../../navigationHMTT.js"></script>
