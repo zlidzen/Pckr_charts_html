@@ -5,63 +5,77 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="../../../main.js"></script> 
   </head>
-<body>  
-<div class='content'>
-    <div id='prev_action'>  </div>
-    <div class='mid'>
-    <H2 id='title'>MTT NL holdem-poker charts</H2>
-      <table>
-        <tr>
-          <td><a href='DefBBvsUTG.html'>BB vs UTG</a></td>
-          <td class='gray_color'> <a href=''>BB vs MP</a> </td>
-          <td> <a href='DefBBvsHJCO.html'>BB vs HJ/CO</a> </td>
-          <td> <a href='DefBBvsBTNSB.html'>BB vs BTN/SB</a> </td>
-        </tr>
-      </table>
-
-      <div id="chart">  </div>
-
-  </div>
-  <div id='post_action'>
-    <table>
-      <tr><td class='blue_color'>3bb RFI</td></tr>
-      <tr><td class='lemon_color'>2.5bb RFI</td></tr>
-      <tr><td class='green_color'>2bb RFI</td></tr>
-      <tr><td class='purple_color'>3-bet</td></tr>
-      <tr><td class='red_color'>3-bet or Cold-Call 3bb</td></tr>
-    </table>
-  </div>
-</div>
-</body>
-    <script type="text/javascript">
+  <body calss="container-xxl">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <span class="fs-4"><a href="#">MTT NL holdem-poker charts</a></span>
+    </header>
+  
+  <main class='container'>
+    <div class="d-flex justify-content-center p-3">
+      <nav class="nav flex-column col-2 m-2" id='prev_action'> </nav>
+  
+      <div class="col-8 m-2">
+        <div class="btn-group gap-1 d-flex justify-content-evenly m-2 flex-wrap" role="group" id='position'>  </div>
+        <div id='chart'> </div>
+        <div id='hint' class="border rounded-3"> Hints </div>
+      </div>
+  
+    <div class="col m-2" id='right_side'>
+      <div id='settings'> Settings
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked">Luck on/off</label>
+        </div>
+      </div>
+      <div class="d-grid gap-1 m-2" role="group" id='post_action'>  </div>
+      <div id='advertising' class="border rounded-3"> Here can be advertisement </div>
+    </div>
+  
+    </div>
+  </main>
+  <footer></footer>
+  </body>
+  <script type="text/javascript">
   let positions = {
-
+    "DefBBvsUTG.html":"BB vs UTG",
+    "#":"BB vs MP",
+    "DefBBvsHJCO.html":"BB vs HJ/CO",
+    "DefBBvsBTNSB.html":"BB vs BTN/SB"
   }
   createPositionBlock(positions);
-      addChart();
+  addChart();
+
+  let postActionsDict = {
+    [blue_color]:"3bb RFI",
+    [lemon_color]:"2.5bb RFI",
+    [green_color]:"2bb RFI",
+    [purple_color]:"3-bet",
+    [red_color]:"3-bet or Cold-Call 3bb"
+  }
+  createPostActions(postActionsDict);
 
   let blue_list = ['AQs','AJs','ATs','A9s','A8s','A7s','A6s','KQs','KJs',
                   'KTs','K9s','AQo','KQo','QJs','QTs','Q9s','AJo','KJo','JJ',
                   'JTs','J9s','ATo','TT','T9s','99','98s','88','87s','77',
                   '66','55','44','33','22'];
-  paint_ids_n(blue_list, 'blue_color');
+  paint_ids_n(blue_list, blue_color);
 
   let lemon_list = ['K8s','K7s','K6s','K5s','K4s','K3s','K2s','Q8s',
                    'QJo','J8s','KTo','QTo','JTo','T8s','A9o','97s',
                    'A8o','86s','76s','75s','65s','64s','54s','53s',
                    '43s','42s','32s'];
-  paint_ids_n(lemon_list,'lemon_color');
+  paint_ids_n(lemon_list, lemon_color);
 
   let green_list = ['Q7s','Q6s','Q5s','Q4s','Q3s','Q2s','J7s','J6s',
                    'J5s','J4s','J3s','J2s','T7s','T6s','K9o','Q9o',
                    'J9o','T9o','96s','98o','85s','74s'];
-  paint_ids_n(green_list,'green_color');
+  paint_ids_n(green_list, green_color);
 
   let purple_list = ['AA','AKs','AKo','KK','QQ'];
-  paint_ids_n(purple_list,'purple_color');
+  paint_ids_n(purple_list, purple_color);
 
   let red_list = ['A5s','A4s','A3s','A2s'];
-  paint_ids_n(red_list, 'red_color');
+  paint_ids_n(red_list, red_color);
 </script>
 <script src="navigation.js"></script>
 <script src="../../navigationHMTT.js"></script>
