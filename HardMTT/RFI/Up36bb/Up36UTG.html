@@ -35,8 +35,24 @@
   </div>
 </div>
 </body>
-    <script type="text/javascript">
-      addChart();
+<script type="text/javascript">
+  let positions = {
+          "#":"UTG",
+          "Up36MP.html":"MP",
+          "Up36HJ.html":"HJ",
+          "Up36CO.html":"CO",
+          "Up36BTN.html":"BTN",
+          "Up36SB.html":"SB"
+  }
+  createPositionBlock(positions);
+  addChart();
+
+  let postActionsDict = {
+      [red_color] :"4-bet",
+      [yellow_color] :"Call vs 3-bet",
+      [gray_color] :"Fold vs 3-bet"
+  }
+  createPostActions(postActionsDict);
 
   let red_list = ['AA','KK'];
   paint_ids(red_list, 'red_color');
